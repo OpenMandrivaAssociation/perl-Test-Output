@@ -8,7 +8,7 @@ Version:    %{version}
 Release:    %{release}
 License:    GPL or Artistic
 Group:      Development/Perl
-Summary:    Utilities to test STDOUT and STDERR messages.
+Summary:    Utilities to test STDOUT and STDERR messages
 Source:     http://www.cpan.org/modules/by-module/Test/%{realname}-%{version}.tar.gz
 Url:        http://search.cpan.org/dist/%{realname}
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
