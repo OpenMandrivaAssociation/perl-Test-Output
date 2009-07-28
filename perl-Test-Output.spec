@@ -1,23 +1,21 @@
+%define upstream_name    Test-Output
+%define upstream_version 0.16
 
-%define realname   Test-Output
-%define version    0.16
-%define release    %mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
 Summary:    Utilities to test STDOUT and STDERR messages
-Source:     http://www.cpan.org/modules/by-module/Test/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Sub::Exporter)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Test::Tester)
-
 BuildArch: noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Test::Output provides a simple interface for testing output sent to STDOUT
@@ -30,10 +28,8 @@ provides is just to great to pass up.
 
 Test::Output ties STDOUT and STDERR using Test::Output::Tie.
 
-
-
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -54,6 +50,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes META.yml README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
 
