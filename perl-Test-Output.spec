@@ -1,9 +1,9 @@
 %define upstream_name    Test-Output
-%define upstream_version 0.16
+%define upstream_version 1.01
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Utilities to test STDOUT and STDERR messages
 License:    GPL+ or Artistic
