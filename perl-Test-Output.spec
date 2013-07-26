@@ -1,15 +1,15 @@
 %define upstream_name    Test-Output
-%define upstream_version 1.01
+%define upstream_version 1.02
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 1.02
+Release:	1
 
 Summary:	Utilities to test STDOUT and STDERR messages
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Test/Test-Output-1.02.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Sub::Exporter)
@@ -92,5 +92,6 @@ perl Makefile.PL INSTALLDIRS=vendor
 * Mon Jan 07 2008 Jérôme Quelin <jquelin@mandriva.org> 0.10-1mdv2008.1
 + Revision: 146316
 - import perl-Test-Output
+
 
 
