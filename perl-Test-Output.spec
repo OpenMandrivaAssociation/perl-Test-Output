@@ -4,7 +4,7 @@
 Summary:	Utilities to test STDOUT and STDERR messages
 Name:		perl-%{modname}
 Version:	%perl_convert_version 1.02
-Release:	3
+Release:	4
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
