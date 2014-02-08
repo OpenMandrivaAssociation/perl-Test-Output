@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 1.02
-Release:	1
+Release:	2
 
 Summary:	Utilities to test STDOUT and STDERR messages
 License:	GPL+ or Artistic
