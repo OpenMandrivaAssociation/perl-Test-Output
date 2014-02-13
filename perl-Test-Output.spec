@@ -1,14 +1,14 @@
 %define modname	Test-Output
-%define modver	1.02
+%define modver 1.03
 
 Summary:	Utilities to test STDOUT and STDERR messages
 Name:		perl-%{modname}
-Version:	%perl_convert_version 1.02
-Release:	5
+Version:	%perl_convert_version %{modver}
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Test/Test-Output-1.02.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Test/Test-Output-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires:	perl(Sub::Exporter)
@@ -43,4 +43,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 %doc Changes META.yml README
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
+
 
