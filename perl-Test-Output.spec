@@ -1,10 +1,10 @@
 %define modname	Test-Output
-%define modver 1.03
+%define modver 1.031
 
 Summary:	Utilities to test STDOUT and STDERR messages
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	6
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -40,8 +40,6 @@ perl Makefile.PL INSTALLDIRS=vendor
 %makeinstall_std
 
 %files
-%doc Changes META.yml README
+%doc Changes META.yml
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
-
-
