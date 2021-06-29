@@ -1,10 +1,10 @@
 %define modname	Test-Output
-%define modver 1.031
+%define modver 1.033
 
 Summary:	Utilities to test STDOUT and STDERR messages
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Test::Output
