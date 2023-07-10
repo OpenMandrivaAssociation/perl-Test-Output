@@ -1,14 +1,13 @@
 %define modname	Test-Output
-%define modver 1.033
 
 Summary:	Utilities to test STDOUT and STDERR messages
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
+Version:	1.034
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Test::Output
-Source0:	http://www.cpan.org/modules/by-module/Test/Test-Output-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Test/Test-Output-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires:	perl(Sub::Exporter)
@@ -27,17 +26,17 @@ provides is just to great to pass up.
 Test::Output ties STDOUT and STDERR using Test::Output::Tie.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
+perl Makefile.PL INSTALLDIRS=vendor
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
-#make test
+%make_build test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes META.yml
