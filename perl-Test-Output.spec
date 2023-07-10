@@ -1,4 +1,5 @@
 %define modname	Test-Output
+%bcond_without tests
 
 Summary:	Utilities to test STDOUT and STDERR messages
 Name:		perl-%{modname}
@@ -13,6 +14,9 @@ BuildRequires:	perl-devel
 BuildRequires:	perl(Sub::Exporter)
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test::Tester)
+%if %{with tests}
+BuildRequires:	perl(Capture::Tiny)
+%endif
 
 %description
 Test::Output provides a simple interface for testing output sent to STDOUT
@@ -32,8 +36,10 @@ perl Makefile.PL INSTALLDIRS=vendor
 %build
 %make_build
 
+%if %{with tests}
 %check
 %make_build test
+%endif
 
 %install
 %make_install
