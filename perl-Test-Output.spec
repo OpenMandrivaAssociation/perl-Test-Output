@@ -7,7 +7,7 @@ Version:	1.034
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Test::Output
+Url:		https://metacpan.org/pod/Test::Output
 Source0:	http://www.cpan.org/modules/by-module/Test/Test-Output-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
