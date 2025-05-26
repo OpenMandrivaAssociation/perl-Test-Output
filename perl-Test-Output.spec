@@ -3,8 +3,8 @@
 
 Summary:	Utilities to test STDOUT and STDERR messages
 Name:		perl-%{modname}
-Version:	1.034
-Release:	2
+Version:	1.036
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Test::Output
